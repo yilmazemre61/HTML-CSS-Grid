@@ -1,0 +1,219 @@
+html{
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Big Shoulders Stencil Display', sans-serif;
+}
+p, a, li{
+    font-size: 18px;
+    font-family: 'PT Serif', sans-serif;
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+    /* default background color */
+    background-color: #fff;
+    /* With CSS Grid we are able to define a layout with text. This is done with the grid-area property.
+    In order to do this we need to assign a name to the parent elements that will be affected by thid grid  */
+    display: grid;
+    /* now set the grid columns */
+    grid-template-columns: 25% 25% 25% 25%;
+    /* next set the rows. we are goning to use auto so that will make a row as we need */
+    grid-template-rows: auto;
+    /* this next bit is going to look strange */
+    grid-template-areas: 
+    "header header header header"
+    "main main main sidebar"
+    "footer footer footer footer";
+}
+header{
+    grid-area: header;
+    width: 100%;
+    height: 100px;
+    /* Next we will use a property called position. Using position we will be able to define where the header element will be placed, for example we are going to make it stick to the top of the page(even as we scroll) */
+    position: fixed;
+    /* Next step will need to make sure that the content that comes after it will go under so our header does not disappear.
+    We do this using the property called z-index. The best way to think of the z-index: as a layer, the higher the number, the closer to the top layer it is */
+    z-index: 999;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+header > div{
+    width: auto;
+    height: 90px;
+}
+header > div > a > img{
+    width: auto;
+    height: 100%;
+}
+header > nav > ul{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    list-style: none;
+}
+header > nav > ul > li{
+    padding-left: 15px;
+    text-align: left;
+}
+header > nav > ul > li > a{
+    color: #000;
+}
+/* Style the main content */
+/* Tired of navigating the DOM all the time, classes will help with that. We can taget an id or class directly */
+/* To target a class we use "." and to target an id we use "#" */
+
+main{
+    grid-area: main;
+}
+.masthead{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 500px;
+    background-image: url(../img/masthead.jpg);
+    background-size: cover;
+}
+.masthead > div{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    align-items: center;
+}
+.masthead > div > h1{
+    width: 100%;
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+}
+.row-1{
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    align-items: end;
+}
+.row-1 > div{
+    padding: 10px;
+}
+
+.row-2{
+    display: grid;
+    grid-template-columns: repeat(6, 16%);
+    grid-template-rows: auto;
+}
+.row-2 > div{
+    padding: 10px;
+}
+.row-2 > div > figure{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+.row-2 > div > figure > img{
+    width: 100%;
+    height: auto;
+}
+.row-2 > div > figure > figcaption{
+    font-size: 16px;
+    text-align: center;
+    font-style: italic;
+}
+.row-3, .row-4{
+    display: grid;
+    grid-template-columns: repeat(2, 50% );
+    grid-template-rows: auto;
+}
+.row-3 > div,
+.row-4 > div{
+    padding: 10px;
+}
+.row-3 > div > img,
+.row-4 > div >img{
+    width: 100%;
+    height: auto;
+}
+.row-4 > div:nth-child(1){
+    order: 2;
+}
+.row-4 > div:nth-child(2){
+    order: 1;
+}
+.row-5{
+    display: grid;
+    grid-template-columns: 20% 40% 20% 20%;
+    grid-template-rows: 350px 300px 350px;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+.row-5 > div:nth-child(1){
+
+    outline: solid 2px red;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: center;
+}
+.row-5 > div:nth-child(2){
+    outline: solid 2px blue;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    align-items: end;
+}
+.row-5 > div:nth-child(3){
+    outline: solid 2px orange;
+    grid-column: 3 / span 1;
+    grid-row: third-line / 2;
+    justify-self: center;
+    align-self: self-start;
+}
+aside{
+    grid-area: sidebar;
+    padding-top: 150px;
+    background-color: #0e0e0e;
+}
+aside > section{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    margin-bottom: 25px;
+}
+aside > section > article{
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+}
+aside > section > article > img{
+    width: 100%;
+    height: auto;
+}
+aside > section > article > a{
+    background-color: #fff;
+    color: #0e0e0e;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+footer{
+    grid-area: footer;
+}
+footer{
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: auto;
+}
+footer > div{
+    width: 100%;
+    height: 100px;
+}
+footer > div > a > img{
+    padding: 10px 15px;
+    width: auto;
+    height: 100%;
+}
+footer > div > ul{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: auto;
+    list-style: none;
+    text-align: center;
+    padding-top: 15px;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid - Week 5</title>
+    <meta name="description" content="This week we will be using CSS Grid to create our webpage">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Add Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- add our CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- first we add header-->
+    <header>
+        <!-- logo container-->
+        <div>
+            <a href="index.html"><img src="./img/logo.png" alt="our-logo"></a>
+        </div>
+        <!-- our navigation-->
+        <nav>
+            <!-- Up until now we have just adding placeholders for the 'a' element. For this example let's look at how we can link to a different page
+            (page will be empty) and we will also look at how we can link to a different section of the same page -->
+            <ul>
+                <!-- This link will lead to an empty page that we have made-->
+                <li><a href="about.html">About</a></li>
+                <!-- the rest of the links will just link to a different section of our index -->
+                <li><a href="#row-1">Row 1</a></li>
+                <li><a href="#row-2">Row 2</a></li>
+                <li><a href="#row-3">Row 3</a></li>
+                <li><a href="#row-4">Row 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- This first section will be our masthead. I will be adding a class to the parent element. 
+        Notice that a class has only been applied to the parent and not the child element -->
+        <section class="masthead">
+            <div>
+                <h1>Working With CSS Grid</h1>
+            </div>
+        </section>
+        <!-- For the first row of content we will make 3 columns of text -->
+        <section id="row-1" class="row-1">
+            <!-- column 1 -->
+            <div>
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, doloremque! In omnis earum dolor, ex
+                    dicta incidunt molestias accusantium asperiores architecto ipsa nesciunt voluptatum delectus
+                    necessitatibus, magnam, consequuntur voluptate id?</p>
+            </div>
+            <!-- column 2 -->
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit recusandae mollitia, velit quas vitae
+                    laborum id quos iste! Est tempora officia commodi non explicabo quos debitis et ea magnam soluta.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique fugiat doloribus cumque at saepe
+                    enim voluptate, recusandae vitae, quia non consectetur aspernatur ipsa in nam optio eveniet velit
+                    sit rerum.
+                </p>
+            </div>
+            <!-- column 3 -->
+            <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla dignissimos error ad dolor rem
+                    asperiores aspernatur quae et quos magnam! Animi odio obcaecati dolorum suscipit velit officia modi!
+                    Enim, repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ex quis
+                    numquam maxime, consectetur voluptate eum, ipsum animi vitae sint magnam adipisci suscipit?
+                    Necessitatibus, earum ducimus odit provident hic excepturi.</p>
+            </div>
+        </section>
+        <!-- Next row of content will be 6 columns, these columns will contain 6 figures -->
+        <section id="row-2" class="row-2">
+            <!-- column 1 -->
+            <div>
+                <figure>
+                    <img src="./img/sample-image-1.jpg" alt="sample-image-one">
+                    <figcaption>Sample Image One</figcaption>
+                </figure>
+            </div>
+            <!-- column 2 -->
+            <div>
+                <figure>
+                    <img src="./img/sample-image-1.jpg" alt="sample-image-one">
+                    <figcaption>Sample Image One</figcaption>
+                </figure>
+            </div>
+            <!-- column 3 -->
+            <div>
+                <figure>
+                    <img src="./img/sample-image-1.jpg" alt="sample-image-one">
+                    <figcaption>Sample Image One</figcaption>
+                </figure>
+            </div>
+            <!-- column 4 -->
+            <div>
+                <figure>
+                    <img src="./img/sample-image-1.jpg" alt="sample-image-one">
+                    <figcaption>Sample Image One</figcaption>
+                </figure>
+            </div>
+            <!-- column 5 -->
+            <div>
+                <figure>
+                    <img src="./img/sample-image-1.jpg" alt="sample-image-one">
+                    <figcaption>Sample Image One</figcaption>
+                </figure>
+            </div>
+            <!-- column 6 -->
+            <div>
+                <figure>
+                    <img src="./img/sample-image-1.jpg" alt="sample-image-one">
+                    <figcaption>Sample Image One</figcaption>
+                </figure>
+            </div>
+        </section>
+        <!-- Next row of content will be 2 columns. One column will be text and the other will be an image -->
+        <section id="row-3" class="row-3">
+            <!-- column 1 -->
+            <div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, maxime doloribus at ea explicabo
+                    nam unde eos iure quia consectetur et eligendi quod exercitationem, est, natus illo sint nesciunt
+                    temporibus.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, eius! Explicabo ea totam voluptates
+                    officia enim eveniet nemo repellat perspiciatis accusamus possimus, earum esse omnis natus aliquam
+                    repellendus ad sint.</p>
+            </div>
+            <!-- column 2 -->
+            <div>
+                <img src="./img/sample-image-2.jpg" alt="sample-image-two">
+            </div>
+        </section>
+        <section id="row-4" class="row-4">
+            <!-- column 1 -->
+            <div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, maxime doloribus at ea explicabo
+                    nam unde eos iure quia consectetur et eligendi quod exercitationem, est, natus illo sint nesciunt
+                    temporibus.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, eius! Explicabo ea totam voluptates
+                    officia enim eveniet nemo repellat perspiciatis accusamus possimus, earum esse omnis natus aliquam
+                    repellendus ad sint.</p>
+            </div>
+            <!-- column 2 -->
+            <div>
+                <img src="./img/sample-image-2.jpg" alt="sample-image-two">
+            </div>
+        </section>
+        <!-- Last section of content in the main element will be 3 columns of text that will position manually -->
+        <section id="row-5" class="row-5">
+            <div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, reprehenderit omnis provident
+                    beatae harum quibusdam veniam explicabo recusandae consequatur laborum velit inventore laudantium
+                    facere
+                    cum tenetur error perferendis esse minima?</p>
+            </div>
+            <div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, reprehenderit omnis provident
+                    beatae harum quibusdam veniam explicabo recusandae consequatur laborum velit inventore laudantium
+                    facere
+                    cum tenetur error perferendis esse minima?</p>
+            </div>
+            <div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, reprehenderit omnis provident
+                    beatae harum quibusdam veniam explicabo recusandae consequatur laborum velit inventore laudantium
+                    facere
+                    cum tenetur error perferendis esse minima?</p>
+            </div>
+        </section>
+    </main>
+    <aside>
+        <!-- row 1 -->
+        <section>
+            <article>
+                <img src="./img/sample-image-3.jpg" alt="sample-image-three">
+                <h4>Title</h4>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <img src="./img/sample-image-3.jpg" alt="sample-image-three">
+                <h4>Title</h4>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+        <!-- row 2 -->
+        <section>
+            <article>
+                <img src="./img/sample-image-3.jpg" alt="sample-image-three">
+                <h4>Title</h4>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <img src="./img/sample-image-3.jpg" alt="sample-image-three">
+                <h4>Title</h4>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+        <!-- row 3 -->
+        <section>
+            <article>
+                <img src="./img/sample-image-3.jpg" alt="sample-image-three">
+                <h4>Title</h4>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <img src="./img/sample-image-3.jpg" alt="sample-image-three">
+                <h4>Title</h4>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+    </aside>
+    <footer>
+        <div>
+            <a href="index.html"><img src="./img/logo.png" alt="our-logo"></a>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aliquid ipsam alias tempore totam enim
+                deleniti recusandae consequuntur sunt, sequi ipsa. Omnis eaque, ipsa sed quaerat rerum quibusdam
+                suscipit fugiat.</p>
+        </div>
+        <div>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
